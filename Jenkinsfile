@@ -48,9 +48,9 @@ pipeline {
             steps {
                 script {
                     // Stop and remove the old container if it exists
-                    sh 'docker stop mavenapp || true && docker rm mavenapp || true'
+                   //  sh 'docker stop mavenapp || true && docker rm mavenapp || true'
                     // Run the new container
-                    sh 'docker run -d --name mavenapp -p $DOCKER_IMAGE'
+                    sh 'docker run -d --name mavenapp -p  $DOCKER_IMAGE'
                 }
             }
         }
